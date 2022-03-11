@@ -12,7 +12,8 @@ object EventsData {
     }
 
     fun getDataFromFile(jsonEvents: String): List<Evento> {
-        eventos = Gson().fromJson(jsonEvents, object: TypeToken<List<Evento?>?>() {}.type)
+        if (jsonEvents.isNotEmpty())
+            eventos = Gson().fromJson(jsonEvents, object: TypeToken<List<Evento?>?>() {}.type)
       return eventos
     }
 

@@ -28,12 +28,12 @@
         android:hint="Category"/>
 
     <TextView
+        android:id="@+id/daysLeftCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/daysLeftCounter"
-        android:hint="Days to the Event"
         android:layout_below="@id/catTxt"
-        android:layout_alignLeft="@id/titleTxt"/>
+        android:layout_alignLeft="@id/titleTxt"
+        android:hint="Days to the Event" />
 
     <CalendarView
         android:layout_width="wrap_content"

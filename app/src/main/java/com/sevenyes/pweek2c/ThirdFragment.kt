@@ -45,8 +45,16 @@ class ThirdFragment : Fragment() {
     ): View {
         _binding = FragmentThirdBinding.inflate(inflater, container, false)
 
+        var dayLeft = binding.calendarTxt.date
         binding.titleTxt.text = event?.title
         binding.catTxt.text = event?.cat
+        dayLeft = putDate(event!!.fecha) - dayLeft
+        dayLeft = (dayLeft/86400000)
+
+        binding.daysLeftCounter.text = dayLeft.toString()
+        binding.calendarTxt.date = putDate(event!!.fecha)
+
+        binding.daysLeftCounter.text = "$dayLeft days left"
 
         // Inflate the layout for this fragment
         return binding.root

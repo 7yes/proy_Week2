@@ -26,6 +26,12 @@ fun getDate( date: Long) : Fecha {
 
 }
 
+fun putDate(fecha: Fecha) : Long {
+    val cal = Calendar.getInstance()
+    cal.set(fecha.year, fecha.month, fecha.day)
+    return cal.timeInMillis
+}
+
 fun saveEvent(context : Context, event : Evento ){
 
     EventsData.add(event)
