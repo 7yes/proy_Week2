@@ -1,15 +1,15 @@
 package com.sevenyes.pweek2c
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.sevenyes.pweek2c.databinding.FragmentSecondBinding
+import com.sevenyes.pweek2c.models.Evento
+import com.sevenyes.pweek2c.models.Fecha
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -33,7 +33,7 @@ class SecondFragment : Fragment() {
 
         binding.saveBtn.setOnClickListener {
 
-            if (binding.titleBtn.text.length > 0 && binding.catBtn.text.length > 0) {
+            if (binding.titleBtn.text.isNotEmpty() && binding.catBtn.text.isNotEmpty()) {
                 if(!calendarChanged) fecha = getDate(binding.caledarEvent.date)
                 val evento = Evento(binding.titleBtn.text.toString(), binding.catBtn.text.toString(),fecha)
                 saveEvent(requireContext(),evento)

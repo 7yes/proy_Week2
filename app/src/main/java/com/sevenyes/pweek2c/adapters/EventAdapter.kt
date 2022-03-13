@@ -4,10 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.sevenyes.pweek2c.Evento
+import com.sevenyes.pweek2c.models.Evento
 import com.sevenyes.pweek2c.R
 
 class EventAdapter(

@@ -4,7 +4,9 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.gson.Gson
+import com.sevenyes.pweek2c.models.Evento
 import com.sevenyes.pweek2c.models.EventsData
+import com.sevenyes.pweek2c.models.Fecha
 import java.util.*
 
 
@@ -32,7 +34,7 @@ fun putDate(fecha: Fecha) : Long {
     return cal.timeInMillis
 }
 
-fun saveEvent(context : Context, event : Evento ){
+fun saveEvent(context : Context, event : Evento){
 
     EventsData.add(event)
     val eventos = EventsData.getAllEvents()

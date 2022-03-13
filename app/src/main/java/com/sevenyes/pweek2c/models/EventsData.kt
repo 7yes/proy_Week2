@@ -2,7 +2,6 @@ package com.sevenyes.pweek2c.models
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.sevenyes.pweek2c.Evento
 
 object EventsData {
     private var eventos : MutableList<Evento> = mutableListOf()
