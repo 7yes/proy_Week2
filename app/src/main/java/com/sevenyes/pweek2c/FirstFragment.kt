@@ -24,7 +24,7 @@ class FirstFragment : Fragment() {
 
     private val eventsAdapter by lazy {
         EventAdapter(EventsData.getDataFromFile(readEvents(requireContext()))) {
-            val bundle = Bundle().apply {
+           Bundle().apply {
                 putInt("ZEY", it)
                 findNavController().navigate(R.id.action_FirstFragment_to_thirdFragment, this)
             }
